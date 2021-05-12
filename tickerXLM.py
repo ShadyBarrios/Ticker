@@ -1,23 +1,23 @@
 import requests
 
 while(1):
-	page = requests.get("https://coinranking.com/coin/a91GCGd_u96cF+dogecoin-doge")
+	page = requests.get("https://coinranking.com/coin/f3iaFeCKEmkaZ+stellar-xlm")
 
 	from bs4 import BeautifulSoup
 
-	soup = BeautifulSoup( page.content , 'html.parser')
+	soup = BeautifulSoup( page.conent , 'html.parser')
 
-	priceAnnouncement = "Current price: "
-	changeAnnouncement = "24h % change: " 
+	priceAnnouncement = "XML Current: "
+	changeAnnouncement = "24hr % change: "
 
 	dataPrice = []
-	for paragraph in soup.find(class_ = "coin-overview__price"):
+	for paragraph in soup.find(class_ = "coin-overview__price")
 		dataPrice.append(paragraph.string)
 
 	dataPrice[0].strip()
 
 	dataChange = []
-	for paragraph in soup.find(class_ = "coin-overview__change"):
+	for paragraph in soup.find(class_ = "coin-overview__change")
 		dataChange.append(paragraph.string)
 
 	dataChange[0].strip()
