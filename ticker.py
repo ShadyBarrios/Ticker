@@ -66,6 +66,10 @@ while(1):
 	disp[6] = bchChangeAnnouncement
 	disp[7] = " ".join(bchDataChange[0].split())
 
+	for i in disp
+		print(i)
+
+	print("")
 
 	serial = spi(port=0, device=0, gpio=noop())
     device = max7219(serial, cascaded=4 , block_orientation=-90, rotate=2)
